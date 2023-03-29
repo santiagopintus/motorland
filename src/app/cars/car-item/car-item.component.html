@@ -1,0 +1,13 @@
+<a
+  class="list-group-item clearfix"
+  [routerLink]="['/cars', car.id]"
+  routerLinkActive="active"
+>
+  <h3 class="pull-left"><b>{{ car.make }}</b> {{ car.model }}</h3>
+  <img
+    class="pull-right img-responsive"
+    src="{{ car.img }}"
+    alt="{{ car.make }} {{ car.model }}"
+  />
+  <h4>${{car.price}}</h4>
+</a>

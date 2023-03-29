@@ -1,0 +1,76 @@
+#################################
+############# GET ###############
+#################################
+
+###Cars
+http://localhost:3000/cars
+
+#################################
+############# POST ###############
+#################################
+
+### Cars
+POST http://localhost:3000/cars
+Content-Type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Yaris",
+  "year": 2023,
+  "color": "Gray",
+  "mileage": 0,
+  "price": 10000,
+  "img": "https://lh3.googleusercontent.com/LvwPhieBkF9yNto28gshRfZdzVSFjK8xRLs9R9M86ljIj9vKaMid5jpl0oLr1gB9FYFfw5kyamHlXeEz-GAjX9CrT25G3x0YR8hYZejOBCjYgaU3YPQRcI7O6M0h2T60I7xMikOP9wUWG7AiMn3Ul50uROpTKApjP-LDhmBeyV6uoOQYI3FZ5vtS-xHtNQLv0Lln4B_hOTVlkviS969JlQNBsCc4FGjzs-7JC5a7IrwJOcDXB6SrCGrxhRketnVwPPqdZ93ECxnyesm4FVxvzNfrBP_LsNUILmz7Qc2U_SW2hc9M6xoWwWKmJC4Qlmi_RX-9h80I0bWYFxjWzacpWKncsv831zigCSCy9WwfnszFgpjCyE3ezWW7VVDNb8bxkhd7yF9o5h_9gZ66ILphZfoRXY6iCJJonbVASrrhd5586I56Y62V_SD2-fXBg5gMPH8DcgC5-L-vA3KUfILP2K7yLcoloky-4mzPjG4cI6e_OrQoG3mfL-tQDDiyh2vrTSXnmmtpv6pdRmQ_P_hd2AcHp8TGmlLA84YR7r9T8fzzLPVPLN1_Uh5YL-ZZunwgqJRN2TOwkbnjeKZfCd0WJYybewkKCLDz-PcSMxUNx6ktybFjy6zzZ0u2C0luAh3eDl5C7vIg8qIToSdNRQ6FpTWB0XSJcL9O8lIraN05Gs-4x6EAonEdkscaB_-AMMyTnSbD22DRcnZqFU4DjTAPbE6JmbazYxH4-tOOadWUi7QNeMIoTU9cqqYa_LI0sLC4GNAPSEmnBZI1DUE7MKJwvtrGX_HA3TiHQZMuF4-0ZY5jdtBOfauHMvbEh9T4KN1TXzH3nmrM4PP27_YncvQEDEG65qHfjW_gmiVXM6YvdKGrWugDkWFeJ34NcmG-yGkefDqbmo_HlJvioQ3_7TY8lxfNHYbqeKkGsaPpNEp95snU2-mYng=w758-h426-s-no?authuser=0",
+  "fuelType": "Gasoline",
+  "transmission": "Manual",
+  "bodyType": "Coupe",
+  "condition": "New"
+}
+
+### Cars
+POST http://localhost:3000/cars
+Content-Type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Camry",
+  "year": 2019,
+  "color": "Silver",
+  "mileage": 35000,
+  "price": 20000,
+  "img": "https://example.com/car-image.jpg",
+  "fuelType": "Gasoline",
+  "transmission": "Automatic",
+  "bodyType": "Sedan",
+  "condition": "Excellent"
+}
+
+
+#################################
+############# PUT ###############
+#################################
+
+### Cars
+PUT http://localhost:3000/cars/10
+Content-Type: application/json
+
+{
+  "make": "Ford",
+  "model": "Mustang 65",
+  "year": 1969,
+  "color": "Black",
+  "mileage": 0,
+  "price": 25000,
+  "img": "https://lh3.googleusercontent.com/3YwIqrGZcFS4pSMc439-dcosUPyIKXigDFIFuN2_AhF9dPLo4c0AuvuTu_xvCLEMtj1xiD8UQ84NY6MWzVra-6TvQADbG-iBwiMDxgwbqPsFPSwGvKrcinAMYXlEedYRYNff1JQT3pHOMNCysh03s4_xrOOpB1btpJMYFuBvIMiCz52GZJcM-qRv0qEoX8dasHhgNnmW-tHlJyEnQxGNTYCW1KtmudSmUpHAF5o8ztAgCwlj_hd7ScutzG5JHZe7M9ecqQIlI3dFlZey6O4sxk5PIYhgmSYLgnkoS0FIGnDthCFj6bhVduWoxEnfWJZ0VGiZ_Ullgua3njOBWhv52xC2H47goOOzg00LvxeNHm1Pdd5tCfKvJqJhT0ohTdPXNefHpnhUjGn1v3EHTYujn794iPvpJg6jCt5BfTWwksv1zCMYwwXlgVIBslZSOO7lM8dHhhLPjzdrKuhbep-2CCjomHxvHd9-ZejXIomEGilfjbIY5eppjnaTLwpuFabSKsbUIklmiCtWuIlrzx8eqmdtpvNt9LQCQwMjULUlms3karfeY-ouWf25Lams2x7BiX5iPC_oSEWmeYosJdKlPj6B1Xk5vLNslhe0X5qk68crIPwmLs4xd-TcFjjyARzD-6_kAHMhGgwMSggYlDmBQOQvzMqDKoWiHrNMqnSOB_ZsIbm43IdH16HWbCBWKo1faSycblrB1fUPb3cL8B3Zi9V73qhD6yT5j5L60MYN49LV8ixlqmFjlQ0fXJQzuCWM8kjpSS09aAMYlMJxHDZNxPCttrUE8cfHAyqepXEgpB0b3vdFAqnQHMR_Stp_sbLuYgDBN9xAMaaoi6kqgdg236bmzeRsWJOqH3ZRaH4xNdF8bl99RYJcqIdLf6HgWB5dCgCPwJ8XOMXMVqW8IubKTRjlhge4VpL5UM4n_UghvdJf1DS07A=w758-h426-s-no?authuser=0",
+  "fuelType": "Gasoline",
+  "transmission": "Manual",
+  "bodyType": "Coupe",
+  "condition": "New"
+}
+
+#################################
+############ DELETE #############
+#################################
+
+### CONTACTS
+DELETE http://localhost:3000/cars/4

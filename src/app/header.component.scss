@@ -1,0 +1,16 @@
+.navbar {
+  .navbar-header {
+    .navbar-brand {
+      height: unset;
+    }
+  }
+}
+.dropdown-menu {
+  display: block;
+  right: 0;
+}
+.dropdown {
+  &:hover {
+    background-color: #e7e7e7;
+  }
+}

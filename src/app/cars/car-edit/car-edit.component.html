@@ -1,0 +1,237 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form id="car-edit" #f="ngForm" (ngSubmit)="onSubmit()">
+      <!-- MAKE -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="make">Make:</label>
+          <input
+            type="text"
+            id="make"
+            class="form-control required"
+            size="120"
+            max="120"
+            name="make"
+            [(ngModel)]="car.make"
+            #make="ngModel"
+            required
+          />
+          <div
+            *ngIf="make.invalid && (make.dirty || make.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="make.errors?.['required']">Make is required.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODEL -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="model">Model:</label>
+          <input
+            type="text"
+            id="model"
+            class="form-control required"
+            size="120"
+            max="255"
+            name="model"
+            [(ngModel)]="car.model"
+            #model="ngModel"
+            required
+          />
+          <div
+            *ngIf="model.invalid && (model.dirty || model.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="model.errors?.['required']">Model is required.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEAR -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="year">Year:</label>
+          <input
+            type="number"
+            id="year"
+            class="form-control required"
+            size="120"
+            max="255"
+            name="year"
+            [(ngModel)]="car.year"
+            #year="ngModel"
+            required
+          />
+          <div
+            *ngIf="year.invalid && (year.dirty || year.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="year.errors?.['required']">Year is required.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLOR -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="color">Color:</label>
+          <input
+            type="text"
+            id="color"
+            class="form-control required"
+            size="120"
+            max="255"
+            name="color"
+            [(ngModel)]="car.color"
+            #color="ngModel"
+            required
+          />
+          <div
+            *ngIf="color.invalid && (color.dirty || color.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="color.errors?.['required']">Color is required.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MILEAGE -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="mileage">Mileage:</label>
+          <input
+            type="number"
+            id="mileage"
+            class="form-control required"
+            name="mileage"
+            [(ngModel)]="car.mileage"
+            #mileage="ngModel"
+            required
+          />
+          <div
+            *ngIf="mileage.invalid && (mileage.dirty || mileage.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="mileage.errors?.['required']">Mileage is required.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICE -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="price">Price:</label>
+          <input
+            type="number"
+            id="price"
+            class="form-control required"
+            name="price"
+            [(ngModel)]="car.price"
+            #price="ngModel"
+            required
+          />
+          <div
+            *ngIf="price.invalid && (price.dirty || price.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="price.errors?.['required']">Price is required.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="img">Image:</label>
+          <input
+            type="text"
+            id="img"
+            class="form-control"
+            name="img"
+            [(ngModel)]="car.img"
+            #img="ngModel"
+          />
+        </div>
+      </div>
+
+      <!-- FUEL TYPE -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="fuelType">Fuel Type:</label>
+          <input
+            type="text"
+            id="fuelType"
+            class="form-control"
+            size="120"
+            max="255"
+            name="fuelType"
+            [(ngModel)]="car.fuelType"
+            #fuelType="ngModel"
+          />
+        </div>
+      </div>
+
+      <!-- TRANSMISSION -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="transmission">Transmission:</label>
+          <input
+            type="text"
+            id="transmission"
+            class="form-control"
+            size="120"
+            max="255"
+            name="transmission"
+            [(ngModel)]="car.transmission"
+            #transmission="ngModel"
+          />
+        </div>
+      </div>
+
+      <!-- BODY TYPE -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="bodyType">Body Type:</label>
+          <input
+            type="text"
+            id="bodyType"
+            class="form-control"
+            size="4"
+            max="2050"
+            name="bodyType"
+            [(ngModel)]="car.bodyType"
+            #bodyType="ngModel"
+          />
+        </div>
+      </div>
+
+      <!-- CONDITION -->
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="condition">Condition:</label>
+          <input
+            type="text"
+            id="condition"
+            class="form-control"
+            size="120"
+            max="255"
+            name="condition"
+            [(ngModel)]="car.condition"
+            #condition="ngModel"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 btn-toolbar">
+          <button class="btn btn-success" type="submit">Save</button>
+          <button class="btn btn-primary" type="button" (click)="onCancel()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

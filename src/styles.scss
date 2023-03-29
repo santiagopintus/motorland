@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+// Colors
+$violet: #873eff;
+$darkGray: #222222;
+$black: #141414;
+$white: #ffffff;
+// Applied colors
+$primary: $violet;
+$bodyBg: $black;
+$darkBorder: $darkGray;
+$textColor: $white;
+
+.panel,
+.panel .panel-heading,
+a.list-group-item,
+.list-group-item,
+body {
+  background-color: $bodyBg;
+  border-color: $darkBorder;
+  color: $textColor;
+}
+a.list-group-item {
+  &:hover {
+    color: $textColor;
+    background-color: $darkGray;
+  }
+}
+
+body {
+  border-top: 1rem $primary solid;
+}

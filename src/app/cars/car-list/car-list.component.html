@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Cars</h2>
+    <div class="input-n-button">
+      <div class="input-group">
+        <!-- Search input -->
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter a search value"
+          #searchBox
+          (keyup)="search(searchBox.value)"
+          [disabled]="cars.length === 0"
+        />
+        <div
+          class="glyphicon glyphicon-search input-group-addon"
+          (click)="search(searchBox.value)"
+        ></div>
+      </div>
+      <a class="btn btn-success" [routerLink]="['new']">New Car</a>
+    </div>
+  </div>
+  <div class="panel-body">
+    <!-- Detect on click -->
+    <ng-container *ngIf="cars.length > 0; else emptyState">
+      <app-car-item
+        dnd-draggable
+        *ngFor="let car of cars | carsFilter : term"
+        [car]="car"
+      ></app-car-item>
+    </ng-container>
+
+    <ng-template #emptyState>
+      <div>No cars to display.</div>
+    </ng-template>
+  </div>
+</div>
