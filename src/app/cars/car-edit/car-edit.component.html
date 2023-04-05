@@ -58,7 +58,8 @@
             id="year"
             class="form-control required"
             size="120"
-            max="255"
+            min="1900"
+            max="2100"
             name="year"
             [(ngModel)]="car.year"
             #year="ngModel"
@@ -68,6 +69,7 @@
             *ngIf="year.invalid && (year.dirty || year.touched)"
             class="alert alert-danger"
           >
+            <p>The year must be between 1900 and 2100</p>
             <div *ngIf="year.errors?.['required']">Year is required.</div>
           </div>
         </div>

@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+/* GLOBAL FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 // Colors
 $violet: #873eff;
 $darkGray: #222222;
@@ -9,6 +12,7 @@ $primary: $violet;
 $bodyBg: $black;
 $darkBorder: $darkGray;
 $textColor: $white;
+$mainFont: "Poppins", sans-serif;
 
 .panel,
 .panel .panel-heading,
@@ -18,12 +22,18 @@ body {
   background-color: $bodyBg;
   border-color: $darkBorder;
   color: $textColor;
+  font-family: $mainFont;
 }
+
 a.list-group-item {
   &:hover {
     color: $textColor;
     background-color: $darkGray;
   }
+}
+
+h1, h2 {
+  font-weight: 700;
 }
 
 body {
